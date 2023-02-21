@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error" strict="true">
+  <Properties>
+    <property name="stdPattern">%d{yyyy MMM dd HH:mm:ss} [%t] %-5level %logger{5} - %msg%n</property>
+  </Properties>
+
+  <Appenders>
+    <Console name="Console">
+      <Layout type="PatternLayout" pattern="${stdPattern}"/>
+    </Console>
+  </Appenders>
+  
+  <Loggers>
+    <Root level="all">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+
+</Configuration>
