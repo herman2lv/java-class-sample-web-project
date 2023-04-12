@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.epam</groupId>
-  <artifactId>build-test</artifactId>
+  <artifactId>buld-test</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
 
@@ -17,13 +17,13 @@
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.5.4</version>
+      <version>42.4.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
-      <version>2.20.0</version>
+      <version>2.18.0</version>
     </dependency>
     <dependency>
       <groupId>jakarta.servlet</groupId>
@@ -48,6 +48,8 @@
       <version>1.18.24</version>
       <scope>provided</scope>
     </dependency>
+
+
   </dependencies>
 
   <build>

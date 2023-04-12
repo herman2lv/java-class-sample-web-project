@@ -1,6 +1,6 @@
-package com.hrm.bookstore.platform.impl;
+package com.hrm.bookstore.util.impl;
 
-import com.hrm.bookstore.platform.ConfigurationManager;
+import com.hrm.bookstore.util.ConfigurationManager;
 
 import java.io.IOException;
 import java.io.InputStream;
