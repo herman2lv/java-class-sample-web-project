@@ -6,10 +6,12 @@ import com.hrm.bookstore.data.entity.Book;
 import com.hrm.bookstore.data.mapper.DataMapper;
 import com.hrm.bookstore.data.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Repository
 @RequiredArgsConstructor
 public class BookRepositoryImpl implements BookRepository {
     private final BookDao bookDao;

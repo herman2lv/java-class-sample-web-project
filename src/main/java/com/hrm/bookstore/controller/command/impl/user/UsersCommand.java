@@ -5,9 +5,10 @@ import com.hrm.bookstore.data.entity.User;
 import com.hrm.bookstore.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
-
+@Controller("users")
 @RequiredArgsConstructor
 public class UsersCommand implements Command {
     private final UserService service;

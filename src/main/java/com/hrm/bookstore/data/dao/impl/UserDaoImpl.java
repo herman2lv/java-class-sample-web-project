@@ -5,6 +5,7 @@ import com.hrm.bookstore.data.dao.UserDao;
 import com.hrm.bookstore.data.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @Log4j2
 @RequiredArgsConstructor
+@Repository
 public class UserDaoImpl implements UserDao {
     private static final String FIND_BY_ID = "SELECT u.id, u.email, u.password, u.role FROM users u WHERE u.id = ?";
     private static final String FIND_BY_EMAIL = "SELECT u.id, u.email, u.password, u.role FROM users u WHERE u.email = ?";

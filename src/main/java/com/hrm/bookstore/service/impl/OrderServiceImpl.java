@@ -8,12 +8,14 @@ import com.hrm.bookstore.data.repository.BookRepository;
 import com.hrm.bookstore.data.repository.OrderRepository;
 import com.hrm.bookstore.service.OrderService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Service
 @RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;

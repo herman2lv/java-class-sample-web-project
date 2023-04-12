@@ -7,10 +7,11 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.Part;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 import java.util.UUID;
-
+@Controller("create_user")
 @RequiredArgsConstructor
 public class CreateUserCommand implements Command {
     private final UserService userService;

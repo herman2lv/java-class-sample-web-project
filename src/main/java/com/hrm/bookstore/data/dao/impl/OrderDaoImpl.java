@@ -5,6 +5,7 @@ import com.hrm.bookstore.data.dao.OrderDao;
 import com.hrm.bookstore.data.dto.OrderDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @Log4j2
 @RequiredArgsConstructor
+@Repository
 public class OrderDaoImpl implements OrderDao {
     private static final String FIND_BY_ID = "SELECT o.id, o.user_id, o.total_cost, o.status FROM orders o WHERE o.id = ?";
     private static final String FIND_ALL = "SELECT o.id, o.user_id, o.total_cost, o.status FROM orders o";

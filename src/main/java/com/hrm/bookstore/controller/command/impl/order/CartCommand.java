@@ -7,9 +7,10 @@ import com.hrm.bookstore.service.OrderService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
 import java.util.Map;
-
+@Controller("cart")
 @RequiredArgsConstructor
 public class CartCommand implements Command {
     public static final String PAGE = "jsp/order/cart.jsp";

@@ -5,9 +5,10 @@ import com.hrm.bookstore.data.entity.Order;
 import com.hrm.bookstore.service.OrderService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
-
+@Controller("orders")
 @RequiredArgsConstructor
 public class OrdersCommand implements Command {
     private final OrderService service;

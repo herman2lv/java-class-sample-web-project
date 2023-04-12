@@ -3,10 +3,11 @@ package com.hrm.bookstore.controller.command.impl.order;
 import com.hrm.bookstore.controller.command.Command;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
 
 import java.util.HashMap;
 import java.util.Map;
-
+@Controller("add_to_cart")
 public class AddToCartCommand implements Command {
     @Override
     public String execute(HttpServletRequest req) {

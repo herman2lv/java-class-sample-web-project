@@ -5,7 +5,9 @@ import com.hrm.bookstore.data.entity.User;
 import com.hrm.bookstore.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
+@Controller("user")
 @RequiredArgsConstructor
 public class UserCommand implements Command {
     private final UserService service;

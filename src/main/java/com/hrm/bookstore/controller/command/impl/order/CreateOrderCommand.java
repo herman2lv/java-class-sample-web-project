@@ -7,9 +7,10 @@ import com.hrm.bookstore.service.OrderService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
 import java.util.Map;
-
+@Controller("create_order")
 @RequiredArgsConstructor
 public class CreateOrderCommand implements Command {
     private final OrderService orderService;

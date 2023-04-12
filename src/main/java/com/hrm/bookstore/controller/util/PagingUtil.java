@@ -2,9 +2,10 @@ package com.hrm.bookstore.controller.util;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
-public enum PagingUtil {
-    INSTANCE;
+@Component
+public class PagingUtil {
 
     public Paging getPaging(HttpServletRequest req) {
         String limitStr = req.getParameter("limit");

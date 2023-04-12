@@ -5,6 +5,7 @@ import com.hrm.bookstore.data.dao.BookDao;
 import com.hrm.bookstore.data.dto.BookDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @Log4j2
 @RequiredArgsConstructor
+@Repository
 public class BookDaoImpl implements BookDao {
     private static final String FIND_BY_ID = "SELECT b.id, b.title, b.price FROM books b WHERE b.id = ?";
     private static final String FIND_ALL = "SELECT b.id, b.title, b.price FROM books b";

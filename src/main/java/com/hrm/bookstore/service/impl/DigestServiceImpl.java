@@ -1,11 +1,13 @@
 package com.hrm.bookstore.service.impl;
 
 import com.hrm.bookstore.service.DigestService;
+import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+@Service
 public class DigestServiceImpl implements DigestService {
     @Override
     public String hash(String password) {

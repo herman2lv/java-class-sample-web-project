@@ -4,9 +4,11 @@ import com.hrm.bookstore.data.entity.Book;
 import com.hrm.bookstore.data.repository.BookRepository;
 import com.hrm.bookstore.service.BookService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 @RequiredArgsConstructor
 public class BookServiceImpl implements BookService {
     private final BookRepository bookRepository;

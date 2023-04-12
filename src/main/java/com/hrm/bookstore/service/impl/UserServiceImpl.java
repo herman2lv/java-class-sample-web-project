@@ -5,9 +5,11 @@ import com.hrm.bookstore.data.repository.UserRepository;
 import com.hrm.bookstore.service.DigestService;
 import com.hrm.bookstore.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;

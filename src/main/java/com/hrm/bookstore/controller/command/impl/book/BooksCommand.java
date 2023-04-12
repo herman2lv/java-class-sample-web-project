@@ -7,9 +7,10 @@ import com.hrm.bookstore.data.entity.Book;
 import com.hrm.bookstore.service.BookService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
-
+@Controller("books")
 @RequiredArgsConstructor
 public class BooksCommand implements Command {
     private final BookService service;

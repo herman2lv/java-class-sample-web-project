@@ -6,7 +6,9 @@ import com.hrm.bookstore.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
+@Controller("login")
 @RequiredArgsConstructor
 public class LoginCommand implements Command {
     private final UserService userService;

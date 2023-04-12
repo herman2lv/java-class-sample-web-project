@@ -2,26 +2,59 @@ package com.hrm.bookstore.data.connection.impl;
 
 import com.hrm.bookstore.data.connection.ConnectionManager;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.io.Closeable;
 import java.sql.Connection;
 
-@Log4j2
-public class ConnectionManagerImpl implements Closeable, ConnectionManager {
-    private ConnectionPool connectionPool;
-    private final String url;
-    private final String password;
-    private final String user;
-    private final String driver;
-    private int poolSize = 16;
 
-    public ConnectionManagerImpl(String url, String password, String user, String driver) {
-        this.url = url;
-        this.password = password;
-        this.user = user;
-        this.driver = driver;
+@Log4j2
+@Component
+public class ConnectionManagerImpl implements Closeable, ConnectionManager {
+
+    private ConnectionPool connectionPool;
+
+    @Value("${db.url}")
+    private String url;
+
+    @Value("${db.password}")
+    private String password;
+
+    @Value("${db.user}")
+    private String user;
+
+    @Value("${db.driver}")
+    private String driver;
+
+    @Value("${db.poolSize}")
+    private int poolSize;
+
+    public ConnectionManagerImpl() {
+    }
+
+    @PostConstruct
+    public void init() {
         connectionPool = new ConnectionPool(driver, url, user, password, poolSize);
         log.info("Connection pool initialized");
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public void setDriver(String driver) {
+        this.driver = driver;
     }
 
     public void setPoolSize(int poolSize) {
@@ -37,6 +70,7 @@ public class ConnectionManagerImpl implements Closeable, ConnectionManager {
         return connectionPool.getConnection();
     }
 
+    @PreDestroy
     @Override
     public void close() {
         if (connectionPool != null) {

@@ -5,7 +5,9 @@ import com.hrm.bookstore.data.entity.User;
 import com.hrm.bookstore.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 
+@Controller("edit_user_form")
 @RequiredArgsConstructor
 public class EditUserFormCommand implements Command {
     private final UserService userService;
